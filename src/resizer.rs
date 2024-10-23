@@ -280,7 +280,7 @@ impl Resizer {
         (self.alpha_buffer.capacity()
             + self.convolution_buffer.capacity()
             + self.super_sampling_buffer.capacity())
-            * size_of::<u8>()
+            * std::mem::size_of::<u8>()
     }
 
     /// Deallocates the internal buffers used to store the results of
